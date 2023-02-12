@@ -48,7 +48,15 @@ const Dropdown = () => {
 
   return (
     <div className="dropdown">
-      <input value={value} onChange={handleChange} onClick={handleFocus} type="text" placeholder=" " name="country" id="country" />
+      <input 
+        value={value}
+        onChange={handleChange}
+        onClick={handleFocus}
+        type="text"
+        placeholder=" "
+        name="country"
+        id="country" 
+        autoComplete="off"/>
       <label htmlFor="country" className="label">
         Country/Rregion
       </label>
