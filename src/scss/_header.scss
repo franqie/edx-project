@@ -1,0 +1,143 @@
+.header {
+    width: 100%;
+    display: flex;
+
+    .hero {
+        flex-grow: 1;
+        background: #0e3639;
+        padding: 1rem;
+
+        .logo {
+            width: 50px;
+            object-fit: contain;
+            margin: 0.3rem 0.6rem 1rem;
+        }
+
+        .banner {
+            height: auto;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            margin: 1rem;
+            margin-left: -0.6rem;
+        }
+
+        .stroke {
+            height: 0;
+            width: 80px;
+            border: 2px solid $warning;
+            transform: rotate(103deg);
+        }
+
+        h1 {
+            display: flex;
+            flex-direction: column;
+            color: #fff;
+            font-size: 2.25rem;
+            font-weight: 700;
+            line-height: 40px;
+            margin-left: -0.5rem;
+        }
+
+        .info__text {
+            color: $info;
+            white-space: wrap;
+        }
+    }
+
+    .graphics {
+        width: 100px;
+        height: auto;
+        background: #0e3639;
+        clip-path: polygon(0 0, 100% 0, 0 100%);
+        -webkit-clip-path: polygon(0 0, 100% 0, 0 100%);
+        border: none;
+    }
+
+    @include md-screen {
+        .hero {
+            .logo {
+                width: 70px;
+            }
+
+            .banner {
+                margin-bottom: 3rem;
+            }
+
+            .stroke {
+                width: 90px;
+                border: 3px solid $warning;
+            }
+
+            h1 {
+                font-size: 3.75rem;
+                line-height: 1;
+            }
+        }
+    }
+
+    @include lg-screen {
+        .hero {
+            .logo {
+                margin: 1rem 1rem 1.5rem 2rem;
+            }
+
+            .banner {
+                // padding: 0 2rem;
+                justify-content: center;
+            }
+
+            .stroke {
+                width: 100px;
+            }
+
+            h1 {
+                flex-direction: row;
+            }
+
+            .info__text {
+                margin-left: 1rem;
+            }
+        }
+    }
+
+    @include xl-screen {
+        .hero {
+            height: 100%;
+            // display: flex;
+            // flex-direction: column;
+            .banner {
+                flex-grow: 1;
+                margin-top: 6.5rem;
+            }
+    
+            .stroke {
+                width: 200px;
+            }
+    
+            h1 {
+                font-size: 4.875rem;
+                flex-direction: column;
+                margin-left: -3rem;
+            }
+    
+            .info__text {
+                margin-left: 0;
+            }
+        }
+
+    }
+}
+
+@include xl-screen {
+    .header {
+        .info__text {
+            span {
+                display: block;
+            }
+        }
+    }
+}
+
+
+

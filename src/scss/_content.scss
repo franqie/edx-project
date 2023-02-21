@@ -1,0 +1,307 @@
+.content {
+    margin-top: 2rem;
+    padding: 0 10px;
+
+    .header {
+        h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        p {
+            font-size: 1rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+    }
+
+    div:not(.buttons) {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin-bottom: 2rem;
+        color: $text;
+
+        input:not(.checkbox) {
+            width: 100%;
+            outline: 0;
+            padding: 10px;
+            color: $text;
+        }
+
+        input.empty {
+            border: 1px solid $error !important;
+        }
+
+        .label {
+            position: absolute;
+            left: 10px;
+            top: 7px;
+            pointer-events: none;
+            // padding: 0 5px;            
+        }
+
+        input:not(.checkbox):focus{
+            border: 2px solid black;
+        }
+        
+        input:not(.checkbox):focus ~ .label{
+            transform: translate(-12px, -22px) scale(0.8);
+            background: #fff;
+            padding: 0 8px;
+        }
+        input:not(:placeholder-shown) ~ .label{
+            transform: translate(-12px, -22px) scale(0.8);
+            background: #fff;
+            padding: 0 8px;
+        }
+
+        span {
+            display: inline-block;
+            margin-top: 2px;
+            height: 0;
+            overflow: hidden;
+            font-size: 0.8rem;
+            color: $text;
+            transition: height ease 0.2s;
+        }
+
+        span.error {
+            color: $error;
+        }
+
+        .show {
+            height: auto !important;
+            overflow: visible !important;
+        }
+    }
+
+    .visible {
+        height: 32px;
+        width: 32px;
+        position: absolute;
+        top: 4px;
+        right: 10px;
+        // bottom: 0;
+        background: transparent;
+        color: $text;
+        font-size: 1.6rem;
+        font-weight: bold;
+        padding: 0;
+        margin: 0;
+        border-radius: 50%;
+        border: 1px solid transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        &:hover {
+            background: $text;
+            color: #fff;
+            border: 1px solid $text;
+
+            img {
+                filter: invert(1);
+                background-color: transparent;
+            }
+        }
+
+        &:focus {
+            border: 2px solid $text;
+            color: $text;
+            background: #fff;
+        }
+
+        &:focus:hover {
+            img {
+                filter: invert(0);
+                background-color: transparent;
+            }
+        }
+    }
+
+    .checkbox-container {
+        flex-direction: row !important;
+        align-items: center;
+        margin-top: -8px;
+
+        input {
+            appearance: none;
+            -webkit-appearance: none;
+            background: #fff;
+            border: 2px solid $dark;
+            // border-radius: 0;
+            height: 1.5em;
+            width: 1.5em;
+            margin-right: 0.5rem;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:hover {
+                outline: 3px solid rgba(0, 0, 0, 0.185);
+            }
+
+            &::before {
+                display: none;
+                content: "";
+                border: 2px solid $dark;
+                height: 1.7em;
+                width: 1.7em;
+                position: absolute;
+                left: -5px;
+                top: -5px;
+            }
+
+            &::after {
+                font-family: "Font Awesome 5 Free";
+                content:"\f00c";
+                font-weight: 900;
+                color: #fff;
+                display: none;
+            }
+
+        }
+
+        input[type="checkbox"]:checked {
+            background: $dark;
+
+            &::after {
+                display: block;
+            }
+        }
+
+        input[type="checkbox"]:focus {
+            &::before {
+                display: block;
+            }
+        }
+
+        .checkbox-label {
+            color: $text;
+            font-size: .75rem;
+            line-height: 1.25rem;
+        }
+    }
+
+    p {
+        color: $text;
+        font-size: .75rem;
+        line-height: 1.1rem;
+        margin-bottom: 1.4rem;
+    }
+
+    button {
+        background: $brand;
+        border: 1px solid $brand;
+        color: #fff;
+        // border: none;
+        font-size: 1.12rem;
+        font-size: 500;
+        padding: 10px 20px;
+        text-align: center;
+        user-select: none;
+        cursor: pointer;
+        margin-bottom: 3rem;
+
+        &:hover {
+            background: #921108;
+            border-color: #921108;
+        }
+    }
+
+    .buttons {
+        button {
+            margin-right: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 1.125rem;
+            font-weight: 500;
+            color: $text;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .options {
+        h3 {
+            margin-bottom: 1.2rem;
+        }
+
+        .other {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.7rem;
+            color: $text;
+            text-decoration: none;
+
+            svg {
+                margin-right: 5px;
+                font-size: 1.2rem;
+            }
+
+            span {
+                font-size: 0.995rem;
+                align-self: start;
+            }
+        }
+
+        .socials {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .socials a {
+            height: 36px;
+            line-height: 36px;
+            font-size: 1rem;
+            padding: 0 5px;
+            // margin-right: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            text-decoration: none;
+            color: #fff;
+
+            // span {
+            //     vertical-align: middle;
+            // }
+        }
+
+        img {
+            width: 25px;
+            object-fit: contain;
+            margin-right: 10px;
+        }
+
+        .apple {
+            background: #000;
+        }
+        .facebook {
+            background: $fb-blue;
+        }
+        .google {
+            background: $g-blue;
+
+            img {
+                width: 34px;
+            }
+        }
+        .microsoft {
+            background: $m-black;
+        }
+    }
+
+    .additional {
+        margin-top: 1.5rem;
+        font-size: 0.975rem;
+    }
+}
