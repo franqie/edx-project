@@ -38,6 +38,8 @@ p {
   flex-grow: 1;
   background: #0e3639;
   padding: 1rem;
+  border: none;
+  outline: none;
 }
 .header .hero .logo {
   width: 50px;
@@ -79,6 +81,7 @@ p {
   clip-path: polygon(0 0, 100% 0, 0 100%);
   -webkit-clip-path: polygon(0 0, 100% 0, 0 100%);
   border: none;
+  outline: none;
 }
 @media (min-width: 768px) {
   .header .hero .logo {
@@ -255,7 +258,6 @@ p {
   padding: 1rem;
   color: #454545;
   border: 1px solid #707070;
-  outline: 1px solid #707070;
 }
 .content div:not(.buttons) input.empty {
   border: 1px solid #ab0d02 !important;

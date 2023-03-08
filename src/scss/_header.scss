@@ -6,6 +6,8 @@
         flex-grow: 1;
         background: #0e3639;
         padding: 1rem;
+        border: none;
+        outline: none;
 
         .logo {
             width: 50px;
@@ -52,6 +54,7 @@
         clip-path: polygon(0 0, 100% 0, 0 100%);
         -webkit-clip-path: polygon(0 0, 100% 0, 0 100%);
         border: none;
+        outline: none;
     }
 
     @include md-screen {
