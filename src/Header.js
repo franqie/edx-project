@@ -12,7 +12,7 @@ const Header = () => {
             </div>
             <div className="banner__text">
               <h1>
-                <span>Start learning </span>
+                <span className="start__learning">Start learning </span>
                 <span className="info__text">with <span>edX</span></span>
               </h1>
             </div>

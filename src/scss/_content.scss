@@ -1,6 +1,6 @@
 .content {
     margin-top: 2rem;
-    padding: 0 10px;
+    // padding: 0 10px;
 
     .header {
         h3 {
@@ -23,11 +23,16 @@
         color: $text;
 
         input:not(.checkbox) {
+            display: block;
             width: 100%;
+            height: 44px;
             outline: 0;
-            padding: 10px;
+            padding: 1rem;
             color: $text;
+            border: 1px solid #707070;
+            outline: 1px solid #707070;
         }
+
 
         input.empty {
             border: 1px solid $error !important;
@@ -38,6 +43,7 @@
             left: 10px;
             top: 7px;
             pointer-events: none;
+            transition: all ease 0.2s;
             // padding: 0 5px;            
         }
 
@@ -56,24 +62,25 @@
             padding: 0 8px;
         }
 
-        span {
-            display: inline-block;
-            margin-top: 2px;
-            height: 0;
-            overflow: hidden;
-            font-size: 0.8rem;
-            color: $text;
-            transition: height ease 0.2s;
-        }
+    }
 
-        span.error {
-            color: $error;
-        }
+    div:not(.buttons) >span {
+        display: inline-block;
+        margin-top: 2px;
+        height: 0;
+        overflow: hidden;
+        font-size: 0.8rem;
+        color: $text;
+        transition: height ease 0.2s;
+    }
 
-        .show {
-            height: auto !important;
-            overflow: visible !important;
-        }
+    div:not(.buttons) > span.error {
+        color: $error;
+    }
+
+    div:not(.buttons) > .show {
+        height: auto !important;
+        overflow: visible !important;
     }
 
     .visible {

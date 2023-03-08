@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Tilt+Warp&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css");
 html, * {
   margin: 0;
@@ -125,9 +125,13 @@ p {
     width: 200px;
   }
   .header .hero h1 {
-    font-size: 4.875rem;
+    max-width: 380px;
+    font-size: 5.875rem;
     flex-direction: column;
     margin-left: -3rem;
+  }
+  .header .hero .start__learning {
+    word-wrap: break-word;
   }
   .header .hero .info__text {
     margin-left: 0;
@@ -183,6 +187,7 @@ p {
   }
   .app .app__content {
     margin-top: 4rem;
+    max-width: 500px;
   }
 }
 
@@ -225,7 +230,6 @@ p {
 
 .content {
   margin-top: 2rem;
-  padding: 0 10px;
 }
 .content .header h3 {
   font-size: 1.2rem;
@@ -244,10 +248,14 @@ p {
   color: #454545;
 }
 .content div:not(.buttons) input:not(.checkbox) {
+  display: block;
   width: 100%;
+  height: 44px;
   outline: 0;
-  padding: 10px;
+  padding: 1rem;
   color: #454545;
+  border: 1px solid #707070;
+  outline: 1px solid #707070;
 }
 .content div:not(.buttons) input.empty {
   border: 1px solid #ab0d02 !important;
@@ -257,6 +265,7 @@ p {
   left: 10px;
   top: 7px;
   pointer-events: none;
+  transition: all ease 0.2s;
 }
 .content div:not(.buttons) input:not(.checkbox):focus {
   border: 2px solid black;
@@ -276,7 +285,7 @@ p {
   background: #fff;
   padding: 0 8px;
 }
-.content div:not(.buttons) span {
+.content div:not(.buttons) > span {
   display: inline-block;
   margin-top: 2px;
   height: 0;
@@ -285,10 +294,10 @@ p {
   color: #454545;
   transition: height ease 0.2s;
 }
-.content div:not(.buttons) span.error {
+.content div:not(.buttons) > span.error {
   color: #ab0d02;
 }
-.content div:not(.buttons) .show {
+.content div:not(.buttons) > .show {
   height: auto !important;
   overflow: visible !important;
 }

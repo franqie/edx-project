@@ -116,9 +116,14 @@
             }
     
             h1 {
-                font-size: 4.875rem;
+                max-width: 380px;
+                font-size: 5.875rem;
                 flex-direction: column;
                 margin-left: -3rem;
+            }
+
+            .start__learning {
+                word-wrap: break-word;
             }
     
             .info__text {

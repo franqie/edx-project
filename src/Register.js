@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 // import { AiFillEye, AiFillEyeInvisible } from'react-icons/ai';
 import Dropdown from './Dropdown';
-import img1 from './visible.svg';
-import img2 from './invisible.svg';
+// import img1 from './visible.svg';
+// import img2 from './invisible.svg';
 import InputComponent from './InputComponent';
 
 const Register = () => {
@@ -27,7 +27,7 @@ const Register = () => {
         <InputComponent
           type="text"
           name="username"
-          label=" Username"
+          label="Public Username"
           msg="The name that will identify you in your course"
           errorMsg="Username must be between 2 and 30 characters" 
         />
