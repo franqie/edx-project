@@ -261,9 +261,15 @@
 
         .socials {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             gap: 1rem;
+            margin-bottom: 0;
         }
+        // .socials {
+        //     display: grid;
+        //     grid-template-columns: 1fr 1fr;
+        //     gap: 1rem;
+        // }
 
         .socials a {
             height: 36px;
@@ -309,5 +315,11 @@
     .additional {
         margin-top: 1.5rem;
         font-size: 0.975rem;
+    }
+
+    @include sm-screen {
+        .socials {
+            grid-template-columns: 1fr 1fr !important;
+        }
     }
 }
